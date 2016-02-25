@@ -4,7 +4,7 @@ function followPath(path, obj) {
 	if (path.length === 0) {
 		result = obj; 
 	} else {
-		result = followPath(path.slice(1), obj[path[0]])
+		result = followPath(path.slice(1), obj[path[0]]);
 	}
 
 	return result; 
