@@ -60,7 +60,6 @@ const followPath = (path, obj, options) => {
 
 export default followPath; 
 
-
 /* 
 Example use: 
 
@@ -75,4 +74,30 @@ var myObj = {
 };
 
 followPath(['prop1', 'propA', 'propOne'], myObj); // ==> "you found me"
+
+Another Example: 
+
+var obj = {
+	hey: 'ho', 
+	lets: {
+		go: {
+			'home': 32
+		}
+	}
+}; 
+
+followPath(['lets', 'go', 'now'], obj, true);
+
+console.log("JSON.stringify(obj):", JSON.stringify(obj)); 
+
+// ==>
+{ 
+	"hey": "ho", 
+	"lets": { 
+		"go": { 
+			"home": 32, 
+			"now": {} 
+		} 
+	} 
+}
 */
